@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<?php
+if(isset($_Get['n'])) {
+	$n = $_Get['n'];
+
+	echo "<h2>Time Table for $n</h2>";
+	echo "<table>";
+	echo "<tr><th>Multiplier</th><th>Result</th></tr>"
+
+	for ($i = 1; $i <= 12; $i++) {
+		$result = $i * $n;
+		echo "<tr><td>$i</td><td>$result</td></tr>";
+	}
+	echo "</table>";
+} else {
+	echo "<p>Please provide a number 'n' in the query string.</p>"
+}
+?>
+</body>
+</html>
