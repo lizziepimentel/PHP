@@ -9,19 +9,20 @@
 <body>
 <?php
 if(isset($_GET['n'])) {
-	$n = $_GET['n'];
+    $n = $_GET['n'];
 
-	echo "<h2>Time Table for $n</h2>";
-	echo "<table>";
-	echo "<tr><th>Multiplier</th><th>Result</th></tr>";
+    echo "<h2>Times Table for $n</h2>";
+    echo "<table>";
+    echo "<tr><th>Multiplier</th><th>Result</th></tr>";
 
-	for ($i = 1; $i <= 12; $i++) {
-		$result = $i * $n;
-		echo "<tr><td>$i</td><td>$result</td></tr>";
-	}
-	echo "</table>";
+    for ($i = 1; $i <= 12; $i++) {
+        $result = $i * $n;
+        echo "<tr><td>$i</td><td>$result</td></tr>";
+    }
+
+    echo "</table>";
 } else {
-	echo "<p>Please provide a number 'n' in the query string.</p>";
+    echo "<p>Please provide a number 'n' in the query string.</p>";
 }
 ?>
 </body>
